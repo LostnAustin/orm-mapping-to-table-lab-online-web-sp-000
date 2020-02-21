@@ -6,7 +6,7 @@ class Student
       @name = name
       @grade = grade
       @id = id
-      
+
     end
 
     def self.create_table
@@ -38,8 +38,8 @@ class Student
       DB[:conn].execute(sql)
     end
 
-    def self.create(name, grade, id=nil)
-      student = Student.new(name, grade, id)
+    def self.create(name, grade)
+      student = Student.new(name, grade)
       student.save
       student
     end
